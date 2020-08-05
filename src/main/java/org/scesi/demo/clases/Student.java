@@ -9,7 +9,13 @@ import javax.persistence.*;
 @Data
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-    private String name;
+    @Column(name="correo")
+    private String correo;
+
+    @Id
+    @Column(name="username")
+    private String username;
+
+    @Column(name="password")
+    private String password;
 }

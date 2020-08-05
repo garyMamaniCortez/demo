@@ -9,7 +9,9 @@ import javax.persistence.*;
 @Data
 public class Classroom{
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-    private String name;
+    @Column(name="cod_cl")
+    private String cod_cl;
+
+    @Column(name="ubication")
+    private String ubication;
 }

@@ -10,6 +10,12 @@ import javax.persistence.*;
 public class Time_of{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-    private String name;
+    @Column(name="cod_ti")
+    private int cod_ti;
+
+    @Column(name="starts")
+    private String starts;
+
+    @Column(name="ends")
+    private String ends;
 }

@@ -9,5 +9,6 @@ import javax.persistence.*;
 @Data
 public class Day {
     @Id
-    private Long day;
+    @Column(name="day")
+    private String day;
 }

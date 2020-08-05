@@ -9,7 +9,15 @@ import javax.persistence.*;
 @Data
 public class Subjects {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    @Column(name="cod_cls")
+    private Long cod_cls;
+
+    @Column(name="group_of")
+    private String group_of;
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="semester")
+    private char semester;
 }

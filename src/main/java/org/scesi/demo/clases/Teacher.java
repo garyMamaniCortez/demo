@@ -9,7 +9,9 @@ import javax.persistence.*;
 @Data
 public class Teacher {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-    private String name;
+    @Column(name="full_name")
+    private String full_name;
+
+    @Column(name="degrees")
+    private String degrees;
 }
