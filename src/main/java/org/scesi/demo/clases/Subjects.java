@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Subjects {
     @Id
     @Column(name="cod_cls")
-    private Long cod_cls;
+    private String cod_cls;
 
     @Column(name="group_of")
     private String group_of;
