@@ -22,5 +22,12 @@ public class Student {
     @Column(name="password")
     private String password;
 
-    //@
+    @ManyToMany
+    @JoinTable(
+        name="Student_Subjects",
+        joinColumns=@JoinColumn(name="username"),
+        inverseJoinColumns=@JoinColumn(name="cod_cls"),
+        inverseJoinColumns=@JoinColumn(name="group_of")
+    )
+    Set<Subjects> studing;
 }

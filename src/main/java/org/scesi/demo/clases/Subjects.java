@@ -25,11 +25,6 @@ public class Subjects {
     @Column(name="semester")
     private char semester;
 
-    /*@ManyToMany
-    @JoinTable(name="Student_Subjects"
-        ,joinColumns=@JoinColumn(name="cod_cls")
-        ,joinColumns=@JoinColumn(name="group_of")
-        ,inverseJoinColumns=@JoinColumn(name="username")
-    )
-    private Set<Student> student;*/
+    @ManyToMany(mappedBy="studing")
+    Set<Student> studied;
 }
