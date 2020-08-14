@@ -1,7 +1,7 @@
 package org.scesi.demo.clases;
 
 import lombok.Data;
-
+import java.util.Set;
 import javax.persistence.*;
 
 @Entity
@@ -18,4 +18,6 @@ public class Student {
 
     @Column(name="password")
     private String password;
+
+    //@
 }
