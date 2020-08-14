@@ -4,8 +4,11 @@ import lombok.Data;
 import java.util.Set;
 import javax.persistence.*;
 
+import org.scesi.demo.clases.SubjectsPK;
+
 @Entity
 @Table(name = "subjects")
+@IdClass(SubjectsPK.class)
 @Data
 public class Subjects {
     @Id
