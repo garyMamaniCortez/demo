@@ -1,5 +1,8 @@
 package org.scesi.demo.clases;
 
+import lombok.Data;
+
+@Data
 public class SubjectsPK{
     private String cod_cls;
     private String group_of;
