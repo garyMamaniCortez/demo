@@ -11,4 +11,7 @@ public class Day {
     @Id
     @Column(name="day")
     private String day;
+
+    @OneToMany(mappedBy="day")
+    private Set<Schedule> DS;//Day Schedule
 }

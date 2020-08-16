@@ -18,4 +18,7 @@ public class Time_of{
 
     @Column(name="ends")
     private String ends;
+
+    @OneToMany(mappedBy="time_of")
+    private Set<Schedule> ToS;//Time_of Schedule
 }

@@ -27,4 +27,7 @@ public class Subjects {
 
     @ManyToMany(mappedBy="studing")
     Set<Student> studied;
+
+    @OneToMany(mappedBy="subjects")
+    private Set<Schedule> SS;//Subjects Schedule
 }

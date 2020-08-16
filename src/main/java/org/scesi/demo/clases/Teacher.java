@@ -14,4 +14,7 @@ public class Teacher {
 
     @Column(name="degrees")
     private String degrees;
+
+    @OneToMany(mappedBy="teacher")
+    private Set<Schedule> TS;//Teacher Schedule
 }
