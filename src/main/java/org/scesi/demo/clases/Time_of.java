@@ -11,7 +11,7 @@ public class Time_of{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name="cod_ti")
-    private int cod_ti;
+    private Long cod_ti;
 
     @Column(name="starts")
     private String starts;
@@ -19,6 +19,4 @@ public class Time_of{
     @Column(name="ends")
     private String ends;
 
-    @OneToMany(mappedBy="time_of")
-    private Set<Schedule> ToS;//Time_of Schedule
 }

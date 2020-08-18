@@ -1,8 +1,8 @@
-package org.scesi.demo.repository;
+package org.scesi.demo.clases;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(path = "teachers")
-public interface TeachersRepository extends JpaRepository<Teacher, String> {
+public interface TeacherRepository extends JpaRepository<Teacher, String> {
 }

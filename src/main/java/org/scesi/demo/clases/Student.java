@@ -4,11 +4,9 @@ import lombok.Data;
 import java.util.Set;
 import javax.persistence.*;
 
-import org.scesi.demo.clases.StudentPK;
-
 @Entity
 @Table(name = "student")
-@IdClass(StudentPK.class)
+@IdClass(value = StudentPK.class)
 @Data
 public class Student {
     @Id
@@ -22,12 +20,4 @@ public class Student {
     @Column(name="password")
     private String password;
 
-    @ManyToMany
-    @JoinTable(
-        name="Student_Subjects",
-        joinColumns=@JoinColumn(name="username"),
-        inverseJoinColumns=@JoinColumn(name="cod_cls"),
-        inverseJoinColumns=@JoinColumn(name="group_of")
-    )
-    Set<Subjects> studing;
 }

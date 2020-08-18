@@ -1,14 +1,9 @@
 package org.scesi.demo.clases;
 
 import lombok.Data;
+import java.io.Serializable;
 
-@Data
-public class SubjectsPK{
+public class SubjectsPK implements Serializable{
     private String cod_cls;
     private String group_of;
-    public StudentPK(String cod_cls,String group_of){
-        super();
-        this.cod_cls=cod_cls;
-        this.group_of=group_of;
-    }
 }

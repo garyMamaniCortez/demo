@@ -4,11 +4,9 @@ import lombok.Data;
 import java.util.Set;
 import javax.persistence.*;
 
-import org.scesi.demo.clases.SubjectsPK;
-
 @Entity
 @Table(name = "subjects")
-@IdClass(SubjectsPK.class)
+@IdClass(value = SubjectsPK.class)
 @Data
 public class Subjects {
     @Id
@@ -25,9 +23,4 @@ public class Subjects {
     @Column(name="semester")
     private char semester;
 
-    @ManyToMany(mappedBy="studing")
-    Set<Student> studied;
-
-    @OneToMany(mappedBy="subjects")
-    private Set<Schedule> SS;//Subjects Schedule
 }

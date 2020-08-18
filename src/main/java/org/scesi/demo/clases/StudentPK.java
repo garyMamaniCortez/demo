@@ -1,14 +1,9 @@
 package org.scesi.demo.clases;
 
 import lombok.Data;
+import java.io.Serializable;
 
-@Data
-public class StudentPK{
+public class StudentPK implements Serializable{
     private String correo;
     private String username;
-    public StudentPK(String correo,String username){
-        super();
-        this.correo=correo;
-        this.username=username;
-    }
 }
