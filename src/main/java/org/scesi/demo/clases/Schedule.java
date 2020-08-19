@@ -19,11 +19,11 @@ public class Schedule{
     @Column(name="day")
     private String day;
 
-    @ManyToONe
+    @ManyToOne
     @JoinColumn(name="idg")
     private Group grupo;
 
-    @ManyToONe
+    @ManyToOne
     @JoinColumn(name="cod_ti")
     private Period time;//periodo
 }

@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "subject")
-@IdClass(value = SubjectsPK.class)
 @Data
 public class Subject {//controller y service(documentacion jpa repository)
     @Id

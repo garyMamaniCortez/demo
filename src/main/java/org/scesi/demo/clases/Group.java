@@ -26,6 +26,6 @@ public class Group{
     @OneToMany(mappedBy="grupo")
     private Set<Schedule> schedule;
 
-    @OneToMany(mappedBy="group")
-    private Set<StudentGroup> studentgroup;
+    /*@OneToMany(mappedBy="group")
+    private Set<StudentGroup> studentgroup;*/
 }
