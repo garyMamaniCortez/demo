@@ -5,17 +5,13 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "subjects")
+@Table(name = "subject")
 @IdClass(value = SubjectsPK.class)
 @Data
-public class Subjects {
+public class Subject {//controller y service(documentacion jpa repository)
     @Id
     @Column(name="cod_cls")
     private String cod_cls;
-
-    @Id
-    @Column(name="group_of")
-    private String group_of;
 
     @Column(name="name")
     private String name;
@@ -23,4 +19,6 @@ public class Subjects {
     @Column(name="semester")
     private char semester;
 
+    @OneToMany(mappedBy= "subjects")
+    private Set<Group> grupo;
 }

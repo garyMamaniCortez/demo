@@ -9,12 +9,12 @@ import javax.persistence.*;
 @Data
 public class C_map {
     @Id
+    @Column(name="cod_map")
+    private String cod_map;
+
     @Column(name="ubication")
     private Long ubication;
 
     @Column(name="destiny")
     private Long destiny;
-
-    @Column(name="cod_map")
-    private String cod_map;
 }

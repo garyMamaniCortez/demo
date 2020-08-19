@@ -20,4 +20,6 @@ public class Student {
     @Column(name="password")
     private String password;
 
+    @OneToMany(mappedBy="student")
+    private Set<StudentGroup> studentgroup;
 }

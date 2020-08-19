@@ -5,9 +5,9 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "time_of")
+@Table(name = "period")
 @Data
-public class Time_of{
+public class Period{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name="cod_ti")
@@ -19,4 +19,6 @@ public class Time_of{
     @Column(name="ends")
     private String ends;
 
+    @OneToMany(mappedBy="time")
+    private Set<Schedule> schedule;
 }
