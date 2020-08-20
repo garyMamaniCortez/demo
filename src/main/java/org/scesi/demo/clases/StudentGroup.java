@@ -10,14 +10,14 @@ import javax.persistence.*;
 public class StudentGroup{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name="id")
+    @Column(name="idsg")
     private Long idsg;
 
     @ManyToOne
-    @JoinColumns(
-        @JoinColumn (name="correo"),
-        @JoinColumn (name="username")
-    )
+    @JoinColumns({
+        @JoinColumn (name="correo",referencedColumnName="correo"),
+        @JoinColumn (name="username",referencedColumnName="username")
+    })
     private Student student;
 
     @ManyToOne

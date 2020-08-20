@@ -17,7 +17,7 @@ public class Group{
     private String teacher;
 
     @Column(name="grupo")
-    private Long grupo;
+    private int grupo;
 
     @ManyToOne
     @JoinColumn(name="cod_cls",nullable = false)
@@ -26,6 +26,6 @@ public class Group{
     @OneToMany(mappedBy="grupo")
     private Set<Schedule> schedule;
 
-    /*@OneToMany(mappedBy="group")
-    private Set<StudentGroup> studentgroup;*/
+    @OneToMany(mappedBy="group")
+    private Set<StudentGroup> studentgroup;
 }
