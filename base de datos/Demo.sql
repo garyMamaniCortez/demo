@@ -15,7 +15,7 @@ create table C_MAP (
 /*==============================================================*/
 /* Table: "GROUP"                                               */
 /*==============================================================*/
-create table "GROUP" (
+create table groups (
    IDG                  INT8                 not null,
    COD_CLS              VARCHAR(10)          null,
    TEACHER              VARCHAR(70)          not null,
@@ -76,14 +76,14 @@ create table SUBJECT (
    constraint PK_SUBJECT primary key (COD_CLS)
 );
 
-alter table "GROUP"
+alter table groups
    add constraint FK_GROUP_REFERENCE_SUBJECT foreign key (COD_CLS)
       references SUBJECT (COD_CLS)
       on delete restrict on update restrict;
 
 alter table SCHEDULE
    add constraint FK_SCHEDULE_REFERENCE_GROUP foreign key (IDG)
-      references "GROUP" (IDG)
+      references groups (IDG)
       on delete restrict on update restrict;
 
 alter table SCHEDULE
@@ -98,6 +98,6 @@ alter table STUDENTGROUP
 
 alter table STUDENTGROUP
    add constraint FK_STUDENTG_REFERENCE_GROUP foreign key (IDG)
-      references "GROUP" (IDG)
+      references groups (IDG)
       on delete restrict on update restrict;
 
