@@ -5,7 +5,7 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "group")
+@Table(name = "groups")
 @Data
 public class Group{
     @Id
@@ -17,7 +17,7 @@ public class Group{
     private String teacher;
 
     @Column(name="grupo")
-    private int grupo;
+    private String grupo;
 
     @ManyToOne
     @JoinColumn(name="cod_cls",nullable = false)
