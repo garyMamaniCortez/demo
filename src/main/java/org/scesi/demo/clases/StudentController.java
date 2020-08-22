@@ -13,10 +13,12 @@ public class StudentController{
     @Autowired
     private StudentRepository repo;
 
-    @GetMapping
-    public boolean login(@RequestBody Stu stu){
+    @RequestMapping("/login")
+    public boolean login(
+        @RequestParam(value="correo",required=true) String correo,
+        @RequestParam(value="pswrd",required=true) String pswrd){
         boolean res=true;
-        Student s=repo.findByCorreoAndPassword(stu.getCorreo(),stu.getPassword());
+        Student s=repo.findByCorreoAndPassword(correo,pswrd);
         if(s==null)
             res=false;
         return res;
