@@ -1,13 +1,13 @@
 package org.scesi.demo.clases;
 
-public class Stu{
+public class SGDAO{
     private String correo;
-    private String password;
+    private Long[] grupos;
 
     public String getCorreo(){
         return correo;
     }
-    public String getPassword(){
-        return password;
+    public Long[] getGrupos(){
+        return grupos;
     }
 }

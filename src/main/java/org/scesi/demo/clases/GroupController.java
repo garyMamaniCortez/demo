@@ -14,9 +14,14 @@ public class GroupController{
     @Autowired
     private GroupRepository repo;
     
-    @GetMapping
+    /*@GetMapping
     public List<Group> list(@RequestBody Subject subject){
         return repo.findBySubjects(subject);
+    }*/
+
+    @GetMapping
+    public List<Group> list(){
+        return repo.findAll();
     }
 
     @PutMapping

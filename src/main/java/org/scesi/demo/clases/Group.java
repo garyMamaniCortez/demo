@@ -21,4 +21,8 @@ public class Group{
     @ManyToOne
     @JoinColumn(name="cod_cls",nullable = false)
     private Subject subjects;
+    
+    public Long getIdg(){
+        return idg;
+    }
 }

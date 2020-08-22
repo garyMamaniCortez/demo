@@ -20,4 +20,11 @@ public class StudentGroup{
     @ManyToOne
     @JoinColumn (name="idg")
     private Group group;
+
+    public void setStudent(Student s){
+        student=s;
+    }
+    public void setGroup(Group g){
+        group=g;
+    }
 }

@@ -13,9 +13,15 @@ public class SubjectController{
     @Autowired
     private SubjectRepository repo;
 
+    @RequestMapping("/semester")
+    public List<Subject> list(
+        @RequestParam(value="sem",required=true) String sem){
+        return repo.findBySemester(sem);
+    }
+
     @GetMapping
-    public List<Subject> list(@RequestBody String semester){
-        return repo.findBySemester(semester);
+    public List<Subject> all(){
+        return repo.findAll();
     }
 
     @PutMapping
