@@ -14,10 +14,7 @@ public class StudentGroup{
     private Long idsg;
 
     @ManyToOne
-    @JoinColumns({
-        @JoinColumn (name="correo",referencedColumnName="correo"),
-        @JoinColumn (name="username",referencedColumnName="username")
-    })
+    @JoinColumn (name="correo",referencedColumnName="correo")
     private Student student;
 
     @ManyToOne

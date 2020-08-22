@@ -1,7 +1,6 @@
 package org.scesi.demo.clases;
 
 import lombok.Data;
-import java.util.Set;
 import javax.persistence.*;
 
 @Entity
@@ -22,10 +21,4 @@ public class Group{
     @ManyToOne
     @JoinColumn(name="cod_cls",nullable = false)
     private Subject subjects;
-
-    @OneToMany(mappedBy="grupo")
-    private Set<Schedule> schedule;
-
-    @OneToMany(mappedBy="group")
-    private Set<StudentGroup> studentgroup;
 }

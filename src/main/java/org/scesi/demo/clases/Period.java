@@ -1,7 +1,7 @@
 package org.scesi.demo.clases;
 
 import lombok.Data;
-import java.util.Set;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -18,7 +18,4 @@ public class Period{
 
     @Column(name="ends")
     private String ends;
-
-    @OneToMany(mappedBy="time")
-    private Set<Schedule> schedule;
 }

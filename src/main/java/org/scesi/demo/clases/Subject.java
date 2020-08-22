@@ -1,7 +1,6 @@
 package org.scesi.demo.clases;
 
 import lombok.Data;
-import java.util.Set;
 import javax.persistence.*;
 
 @Entity
@@ -16,8 +15,5 @@ public class Subject {//controller y service(documentacion jpa repository)
     private String name;
 
     @Column(name="semester")
-    private char semester;
-
-    @OneToMany(mappedBy= "subjects")
-    private Set<Group> grupo;
+    private String semester;
 }
