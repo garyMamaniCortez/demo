@@ -1,6 +1,9 @@
-package org.scesi.demo.clases;
+package org.scesi.demo.controllers;
 
 import java.util.List;
+
+import org.scesi.demo.repo.SubjectRepository;
+import org.scesi.demo.clases.Subject;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

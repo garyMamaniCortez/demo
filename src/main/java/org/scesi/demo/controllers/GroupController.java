@@ -1,7 +1,8 @@
-package org.scesi.demo.clases;
+package org.scesi.demo.controllers;
 
 import java.util.List;
-import java.util.ArrayList;
+import org.scesi.demo.repo.GroupRepository;
+import org.scesi.demo.clases.Group;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,11 +14,6 @@ public class GroupController{
 
     @Autowired
     private GroupRepository repo;
-    
-    /*@GetMapping
-    public List<Group> list(@RequestBody Subject subject){
-        return repo.findBySubjects(subject);
-    }*/
 
     @GetMapping
     public List<Group> list(){
